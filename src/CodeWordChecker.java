@@ -11,6 +11,8 @@ public class CodeWordChecker implements StringChecker {
   }
   public CodeWordChecker(String symbol)
   {
+    this.start = 6;
+    this.end = 20;
     this.nope = symbol;
   }
 
@@ -18,10 +20,6 @@ public class CodeWordChecker implements StringChecker {
     public boolean isValid(String str)
     {
       if (str.indexOf(this.nope) == -1 && str.length() >= this.start && str.length() <= this.end)
-      {
-        return true;
-      }
-      else if (str.indexOf(this.nope) == -1 && str.length() <= 20 && str.length() >= 6)
       {
         return true;
       }
